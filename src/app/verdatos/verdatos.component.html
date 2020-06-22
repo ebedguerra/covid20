@@ -1,0 +1,33 @@
+<h1> Datos registrados </h1>
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Nombres</th>
+    <th scope="col">Apellidos</th>
+    <th scope="col">DNI</th>
+    <th scope="col">Fecha de nacimiento</th>
+    <th scope="col">Movil</th>
+    <th scope="col">Distrito</th>
+    <th scope="col">Sector</th>
+    <th scope="col">Dirección</th>
+    <th scope="col">Creación</th>
+  </tr>
+  </thead>
+  <tbody *ngIf="pacientes && pacientes.length > 0">
+  <tr *ngFor="let paciente of pacientes, let indice =  index">
+    <th scope="row">{{indice + 1}}</th>
+    <td>{{paciente.nombre}}</td>
+    <td>{{paciente.apellido}}</td>
+    <td>{{paciente.dni}}</td>
+    <td>{{paciente.fecnac}}</td>
+    <td>{{paciente.movil}}</td>
+    <td>{{paciente.distrito}}</td>
+    <td>{{paciente.sector}}</td>
+    <td>{{paciente.direccion}}</td>
+    <td>{{paciente.creacion}}</td>
+  </tr>
+
+  </tbody>
+</table>

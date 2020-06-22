@@ -1,0 +1,131 @@
+<div class="row">
+  <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12 bg-home">
+
+  </div>
+  <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
+    <h1 class="h4"> Registro para la prueba rápida de Covid19</h1>
+    <form #myform="ngForm" (ngSubmit)="CreateRecord()"  ngNativeValidate>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="i-nombre">
+            <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>
+          </span>
+        </div>
+        <input [(ngModel)]="nombre" required type="text" class="form-control" placeholder="Nombres" aria-label="Nombres" aria-describedby="i-nombre" name="i-nombre">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="i-apellidos">
+           <svg class="bi bi-person-lines-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7 1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm2 9a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </span>
+        </div>
+        <input [(ngModel)]="apellido" required type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" aria-describedby="i-apellidos" name="i-apellidos">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="i-dni">
+            <svg class="bi bi-card-heading" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+              <path fill-rule="evenodd" d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+              <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1z"/>
+            </svg>
+          </span>
+        </div>
+        <input [(ngModel)]="dni" required type="text" class="form-control" placeholder="DNI" aria-label="DNI" aria-describedby="i-dni" name="i-dni">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="i-fecnac">
+            <svg class="bi bi-calendar" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"/>
+              <path fill-rule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+          </span>
+        </div>
+        <input [(ngModel)]="fecnac" onfocus="(this.type='date')" required type="text" class="form-control" placeholder="Fecha de nacimiento" aria-label="fecha de nacimiento" aria-describedby="i-fecnac" name="i-fecnac">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="i-movil">
+            <svg class="bi bi-phone" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11 1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+              <path fill-rule="evenodd" d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </span>
+        </div>
+        <input [(ngModel)]="movil" required type="tel" class="form-control" placeholder="Teléfono ó Celular" aria-label="celular" aria-describedby="i-movil" name="i-movil">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="i-distrito">
+
+            <svg class="bi bi-map" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M15.817.613A.5.5 0 0 1 16 1v13a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 14.51l-4.902.98A.5.5 0 0 1 0 15V2a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0l4.902.98 4.902-.98a.5.5 0 0 1 .415.103zM10 2.41l-4-.8v11.98l4 .8V2.41zm1 11.98l4-.8V1.61l-4 .8v11.98zm-6-.8V1.61l-4 .8v11.98l4-.8z"/>
+            </svg>
+          </span>
+        </div>
+        <select class="form-control" [(ngModel)]="distrito" class="custom-select" id="i-distritos" name="i-distritos">
+          <option value=""> Distrito: Seleccionar</option>
+          <option value="Pisco">Pisco</option>
+          <option value="Huancano">Huancano</option>
+          <option value="Humay">Humay</option>
+          <option value="Independencia">Independencia</option>
+          <option value="Paracas">Paracas</option>
+          <option value="San Andres">San Andrés</option>
+          <option value="San Clemente">San Clemente</option>
+          <option value="Tupac Amaru Inca">Túpac Amaru Inca</option>
+
+        </select>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="i-sector">
+            <svg class="bi bi-geo-alt" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>
+          </span>
+        </div>
+        <input [(ngModel)]="sector" required type="text" class="form-control" placeholder="Sector: ejemplo Santa Rosa" aria-label="sector" aria-describedby="i-sector" name="i-sector">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="i-direccion">
+            <svg class="bi bi-house-door" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
+              <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+            </svg>
+          </span>
+        </div>
+        <input [(ngModel)]="direccion" required type="text" class="form-control" placeholder="Direccion exacta: " aria-label="direccion" aria-describedby="i-direccion" name="i-direccion">
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary mb-2">Registrarse</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+<div class="row" style="margin-top: 20px;">
+  <div class="col-12" style="text-align: right; color:midnightblue;"> Ante cualquier duda por favor comunicarse con Jesús Medrano: 981296624</div>
+  <div class="col-12" style="text-align: right; font-weight: bold; color: #666666">San Clemente #JuntosVenceremosElCovid19 </div>
+</div>
+
+<div class="modal" *ngIf="initModal">
+  <div class="c-modal">
+    <p>{{mensajeModal}}</p>
+    <div *ngIf="!mensajeBoton" class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <button class="btn btn-primary mb-2" *ngIf="mensajeBoton" onClick="window.location.reload();">Entendido</button>
+  </div>
+</div>
